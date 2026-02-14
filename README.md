@@ -1,40 +1,29 @@
-# 快速跳到 OpenClaw 文档的中文版本
+# OpenClaw 中文文档一键切换
 
-一个用于 `docs.openclaw.ai` 的 Tampermonkey/Greasemonkey 脚本：
+**让 OpenClaw 中文文档的阅读体验更顺滑。**
 
-- 自动检测当前英文页面是否存在中文版本（`/zh-CN`）。
-- 只有在中文页存在时才显示「中文」切换按钮。
-- 兼容站点内 SPA 路由跳转（`pushState` / `replaceState` / `popstate`）。
+## 🎯 解决了什么问题？
 
-## 安装
+在使用 OpenClaw 官方文档时，我们经常遇到这样的场景：
 
-### 方式 1：直接安装（推荐）
+1. **搜索直达英文**：通过搜索引擎查关键词，默认进入的是英文页面。
+2. **手动切换繁琐**：需要手动修改 URL 地址（添加 `/zh-CN/`）才能看到中文。
+3. **迷失阅读进度**：原版的语言切换功能只会直接跳回首页，导致你丢失当前阅读的章节，需要重新寻找。
 
-1. 安装浏览器扩展：Tampermonkey 或 Violentmonkey。
-2. 打开脚本源码文件：`openclaw-cn-docs-switcher.user.js`。
-3. 将内容粘贴到油猴管理面板中新建脚本并保存。
+**这个脚本就是为了解决以上痛点而生。**
 
-### 方式 2：通过 GreasyFork 安装
+## ✨ 主要功能
 
-发布后可直接从 GreasyFork 页面点击安装。
+* **智能检测**：自动在后台检测当前页面是否存在对应的中文版本。
+* **按需显示**：只有当中文文档**真实存在**时，右上角才会出现切换按钮（拒绝 404）。
+* **无感交互**：样式极简，不遮挡内容，支持单页应用（SPA）流畅切换。
 
-## 与 GreasyFork 同步 GitHub（推荐流程）
+## 🚀 如何安装
 
-GreasyFork 支持从 URL 导入脚本并同步更新。建议使用本仓库的 raw 文件地址：
+1. 首先，你需要安装一个用户脚本管理器（如 **Tampermonkey** 或 **Violentmonkey**）。
+2. 点击下方链接直接安装脚本：
 
-`https://raw.githubusercontent.com/viko16/openclaw-cn-docs-switcher/main/openclaw-cn-docs-switcher.user.js`
-
-发布建议：
-
-1. 在 GreasyFork 里使用 “Import from URL”（从 URL 导入）创建脚本。
-2. 之后每次更新脚本时，提交到 GitHub 并确保 `@version` 递增。
-3. GreasyFork 会按导入配置从该 URL 拉取更新。
-
-## 开发
-
-脚本入口文件：`openclaw-cn-docs-switcher.user.js`
-
-本项目没有构建步骤，直接编辑脚本即可。
+👉 **[去安装](https://greasyfork.org/zh-CN/scripts/566227)**
 
 ## License
 
